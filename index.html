@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <div class="container">
+    <h1>Madhav Institute of Technology & Science, Gwalior (M.P.), INDIA</h1>
+    <h2>Student Attendance System Using QR</h2>
+    <h3>Login</h3>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <div id="loginError"></div>
+    <!-- Register Option -->
+    <p>Not registered? <a href="register.html" class="register-link">Register Here</a></p>
+  </div>
+  <script>
+    function login() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      // Fetch registered users from localStorage
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+      
+      // Check if username and password match
+      const user = users.find((user) => user.username === username && user.password === password);
+
+      if (user) {
+        alert("Login successful!");
+        // Redirect to subject selection page
+        window.location.href = "subjects.html";
+      } else {
+        document.getElementById("loginError").innerHTML = `
+          <p style="color: red;">Invalid username or password.</p>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

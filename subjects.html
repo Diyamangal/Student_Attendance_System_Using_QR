@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Subject</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="subject-page">
+  <div class="container">
+    <h1>Madhav Institute of Technology & Science, Gwalior (M.P.), INDIA</h1>
+    <h2>Student Attendance System Using QR</h2>
+    <h3>Choose a Subject</h3>
+    <div id="subjectList"></div>
+  </div>
+  <script src="attendance.js"></script>
+  <script>
+    displaySubjects(); // Call the function to display subjects on page load
+    function selectSubject() {
+      const subject = document.getElementById("subjectSelect").value;
+      if (subject) {
+        window.location.href = `student-entry.html?subject=${subject}`; // Redirect to student entry page
+      } else {
+        alert("Please select a subject.");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <div class="container">
+    <h1>Madhav Institute of Technology & Science, Gwalior (M.P.), INDIA</h1>
+    <h2>Student Attendance System Using QR</h2>
+    
+    <form id="loginForm">
+      <h3>Login</h3>
+      <input type="text" id="username" placeholder="Enter Username" required><br><br>
+      <input type="password" id="password" placeholder="Enter Password" required><br><br>
+      <button type="button" onclick="login()">Login</button>
+    </form>
+    
+    <p>Not registered? <a href="register.html">Register here</a></p>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Replace with your backend API for user validation
+      if (username === "admin" && password === "12345") {
+        alert("Login successful!");
+        window.location.href = "subjects.html"; // Redirect to subject selection
+      } else {
+        alert("Invalid login. Please try again or register.");
+      }
+    }
+    window.location.href = "subjects.html";
+  </script>
+  
+</body>
+</html>

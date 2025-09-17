@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Attendance System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+  <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+  <div class="header">
+    <h1>Student Attendance System</h1>
+  </div>
+
+  <!-- Registration Section -->
+  <div class="container">
+    <h2>Fill Student Details</h2>
+    <input type="text" id="studentId" placeholder="Enter Student ID">
+    <input type="text" id="studentName" placeholder="Enter Student Name">
+    <button onclick="registerStudent()">Generate QR</button>
+    <div id="qrCode" style="margin-top: 20px;"></div>
+  </div>
+
+  <!-- Scanner Section -->
+  <div class="container">
+    <h2>Scan QR Code for Attendance</h2>
+    <div id="scanner" style="width: 300px; height: 300px; margin: auto;"></div>
+    <button onclick="startScanner()">Start Scanner</button>
+    <button onclick="stopScanner()">Stop Scanner</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="register-page">
+  <div class="container">
+    <h1>Madhav Institute of Technology & Science, Gwalior (M.P.), INDIA</h1>
+    <h2>Student Attendance System Using QR</h2>
+    
+    <form id="registerForm">
+      <h3>Register</h3>
+      <input type="text" id="regUsername" placeholder="Enter Username" required><br><br>
+      <input type="password" id="regPassword" placeholder="Enter Password" required><br><br>
+      <button type="button" onclick="register()">Register</button>
+    </form>
+    
+    <p>Already registered? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script>
+    function register() {
+      const username = document.getElementById("regUsername").value;
+      const password = document.getElementById("regPassword").value;
+
+      // Store user details locally or in backend API
+      alert("Registration successful! You can now log in.");
+      window.location.href = "login.html"; // Redirect to login 
+    }
+  </script>
+</body>
+</html>
