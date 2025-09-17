@@ -1,5 +1,3 @@
-:
-
 🎓 Student Attendance System Using QR Code
 
 A modern and user-friendly web application to automate student attendance using QR code technology. This system allows students to register and generate QR codes, which can be scanned during class to log attendance in real time.
